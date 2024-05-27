@@ -1,4 +1,13 @@
-file_name = "books/frankenstein.txt"
+def main():
+  file_name = "books/frankenstein.txt"
+
+  with open(file_name) as f:
+      file_content = f.read()
+    
+  words_in_document = word_count(file_content)
+  letters_count_in_document = count_letters(file_content)
+  sorted_letters = sort_for_report(letters_count_in_document)
+  print_report(sorted_letters, file_name, words_in_document)
 
 def print_report(sorted_list, file_name, words_in_doc_count):
   report_template_start = f"--- Begin report of {file_name} ---"
@@ -51,16 +60,6 @@ def word_count(file_content):
   words = len(words_split)
   words_in_doc = len(words_split)
   return words_in_doc
+  
+main()
 
-  
-def main():
-  with open(file_name) as f:
-      file_content = f.read()
-    
-  return file_content
-  
-file_content = main()
-words_in_document = word_count(file_content)
-letters_count_in_document = count_letters(file_content)
-sorted_letters = sort_for_report(letters_count_in_document)
-print_report(sorted_letters, file_name, words_in_document)
