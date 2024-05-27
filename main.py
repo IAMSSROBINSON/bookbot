@@ -1,6 +1,6 @@
 file_name = f"books/frankenstein.txt"
 
-def print_report(sorted_list, words_in_doc_count):
+def print_report(sorted_list, file_name, words_in_doc_count):
   report_template_start = f"--- Begin report of {file_name} ---"
   report_template_word_count = f"{words_in_doc_count} found in the document\n"
   report_template_end = f"--- End report ---"
@@ -63,4 +63,4 @@ file_content = main()
 words_in_document = word_count(file_content)
 letters_count_in_document = count_letters(file_content)
 sorted_letters = sort_for_report(letters_count_in_document)
-print_report(sorted_letters, words_in_document)
+print_report(sorted_letters, file_name, words_in_document)
