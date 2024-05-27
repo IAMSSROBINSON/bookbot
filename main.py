@@ -1,4 +1,4 @@
-file_name = f"books/frankenstein.txt"
+file_name = "books/frankenstein.txt"
 
 def print_report(sorted_list, file_name, words_in_doc_count):
   report_template_start = f"--- Begin report of {file_name} ---"
