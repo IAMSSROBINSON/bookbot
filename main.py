@@ -11,7 +11,7 @@ def print_report(sorted_list, file_name, words_in_doc_count):
     letter = dict["name"]
     count = dict["num"]
     if letter.isalpha():
-      print(f"The {letter} character was found {count} times")
+      print(f"The '{letter}' character was found {count} times")
   print(report_template_end)
 
 def sort_on(dict):
